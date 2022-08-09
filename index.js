@@ -20,7 +20,7 @@ tabBtn.addEventListener("click", function(){
 function saveLead(lead){
     myLeads.push(lead)
     localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-    render()
+    render(myLeads)
 }
 
 function render(arrayList) {
@@ -40,7 +40,7 @@ function render(arrayList) {
 deleteBtn.addEventListener("dblclick", function() {
     localStorage.clear()
     myLeads = []
-    render()
+    render(myLeads)
 })
 
 inputBtn.addEventListener("click", function() {
